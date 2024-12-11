@@ -1,32 +1,21 @@
-const http = require('http'); // Import the http module
-const fs = require('fs'); // Import the fs module
+const http = require('http');
 
+// Create a server using the http module
 const server = http.createServer((req, res) => {
-    // Log the URL of the incoming request
-    console.log('Client request URL: ', req.url);
-    
-    // Check if the request is a GET request for the root URL
+    // Check if the request method is GET and the URL is '/'
     if (req.method === 'GET' && req.url === '/') {
-        // Use the fs module to read the HTML file
-        fs.readFile('index.html', 'utf8', (err, data) => {
-            if (err) {
-                // Handle error by sending a 500 status and error message
-                res.writeHead(500, { 'Content-Type': 'text/plain' });
-                res.end('Server Error: Unable to load the page');
-            } else {
-                // Send the HTML file with a 200 status and appropriate content-type
-                res.writeHead(200, { 'Content-Type': 'text/html' });
-                res.end(data); // Serve the file content
-            }
-        });
+        // If the conditions are met, set the response header and send 'Hello, World!'
+        res.writeHead(200, { 'Content-Type': 'text/plain' });
+        res.end('Hello, World!');
     } else {
-        // If the route is not found, send a 404 status
+        // If the conditions are not met, set the response header and send 'Not Found'
         res.writeHead(404, { 'Content-Type': 'text/plain' });
-        res.end('404: Page Not Found');
+        res.end('Not Found');
     }
 });
 
 const PORT = 3000;
+// Start the server and listen on the specified port
 server.listen(PORT, () => {
-    console.log(`Server is running at http://localhost:${PORT}`);
+    console.log(`Server is running on http://localhost:${PORT}`);
 });

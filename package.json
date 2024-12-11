@@ -4,7 +4,8 @@
   "description": "InfoSecChatbot",
   "main": "index.js",
   "scripts": {
-    "test": "InfoSecChatbot test"
+    "test": "InfoSecChatbot test",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/JessiChartier/InfoSecChatBot/issues"
   },
-  "homepage": "https://github.com/JessiChartier/InfoSecChatBot#readme"
+  "homepage": "https://github.com/JessiChartier/InfoSecChatBot#readme",
+  "keywords": []
 }
