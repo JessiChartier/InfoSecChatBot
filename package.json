@@ -1,0 +1,19 @@
+{
+  "name": "infosecchatbot",
+  "version": "1.0.0",
+  "description": "InfoSecChatbot",
+  "main": "index.js",
+  "scripts": {
+    "test": "InfoSecChatbot test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JessiChartier/InfoSecChatBot.git"
+  },
+  "author": "Jessi Chartier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JessiChartier/InfoSecChatBot/issues"
+  },
+  "homepage": "https://github.com/JessiChartier/InfoSecChatBot#readme"
+}
